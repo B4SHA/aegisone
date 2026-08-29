@@ -1,0 +1,333 @@
+/* ==========================================================================
+   AEGISONE Pages: Threat Matrix & Hardware Blueprint — Light Glassmorphism
+   ========================================================================== */
+
+/* ==========================================================================
+   Page 3: Threat Matrix & Attack Library
+   ========================================================================== */
+
+.threat-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.threat-card {
+  background: var(--glass-surface);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-glass-sm);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.threat-card:hover {
+  transform: translateY(-4px);
+  background: var(--glass-surface-elevated);
+  box-shadow: var(--shadow-glass-lg);
+}
+
+.threat-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.threat-code-pill {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--border-glass);
+  color: var(--text-tertiary);
+  box-shadow: var(--shadow-glass-sm);
+}
+
+.threat-title-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.threat-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  background: #ffffff;
+  border: 1px solid var(--border-glass);
+  color: var(--accent-cyan);
+  box-shadow: var(--shadow-glass-sm);
+}
+
+.threat-card.critical .threat-card-icon {
+  color: var(--accent-crimson);
+  background: var(--accent-crimson-subtle);
+  border-color: rgba(220, 38, 38, 0.25);
+}
+
+.threat-card.high .threat-card-icon {
+  color: #f97316;
+  background: rgba(249, 115, 22, 0.12);
+  border-color: rgba(249, 115, 22, 0.25);
+}
+
+.threat-card.medium .threat-card-icon {
+  color: var(--accent-amber);
+  background: var(--accent-amber-subtle);
+  border-color: rgba(217, 119, 6, 0.25);
+}
+
+.threat-card-title {
+  font-family: var(--font-display);
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.threat-card-desc {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+
+.threat-criteria-box {
+  background: rgba(248, 250, 252, 0.85);
+  border: 1px solid var(--border-glass-dark);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.criteria-title {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.criteria-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.criteria-list li {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.criteria-list li::before {
+  content: '▸';
+  color: var(--accent-cyan);
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+.threat-card-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-glass-dark);
+  padding-top: 18px;
+}
+
+/* ==========================================================================
+   Page 4: Hardware Architecture & Mathematical Zero-Return Proof
+   ========================================================================== */
+
+.blueprint-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 32px;
+  margin-top: 28px;
+}
+
+/* Interactive Hardware Schematic Box */
+.hardware-schematic-card {
+  background: var(--glass-surface);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  box-shadow: var(--shadow-glass-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.schematic-diagram-wrapper {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 246, 255, 0.9));
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-glass-sm);
+}
+
+.schematic-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.schematic-legend {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  box-shadow: var(--shadow-glass-sm);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.legend-item strong {
+  color: var(--text-primary);
+}
+
+.legend-chip {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+/* Comparison Table: Active Firewall vs Physical Diode */
+.comparison-card {
+  background: var(--glass-surface);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  box-shadow: var(--shadow-glass-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+}
+
+.comparison-table th {
+  text-align: left;
+  padding: 14px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--border-glass-dark);
+}
+
+.comparison-table td {
+  padding: 16px 12px;
+  border-bottom: 1px solid var(--border-glass-dark);
+  vertical-align: top;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table td.feature {
+  font-weight: 700;
+  color: var(--text-primary);
+  width: 30%;
+}
+
+.comparison-table td.firewall {
+  color: var(--text-secondary);
+  width: 35%;
+}
+
+.comparison-table td.diode {
+  color: var(--accent-emerald);
+  font-weight: 700;
+  width: 35%;
+}
+
+.compliance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.compliance-box {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  text-align: center;
+  box-shadow: var(--shadow-glass-sm);
+}
+
+.compliance-box b {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  display: block;
+}
+
+.compliance-box small {
+  font-size: 0.72rem;
+  color: var(--text-tertiary);
+  margin-top: 3px;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .blueprint-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .threat-matrix-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .compliance-grid {
+    grid-template-columns: 1fr;
+  }
+}

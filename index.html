@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="AEGISONE — One-Way Visibility. Zero-Way Exposure. AI-Powered Cyber Threat Intelligence for Unidirectional Networks."/>
+  <title>AEGISONE | One-Way Visibility. Zero-Way Exposure.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./css/studio.css?v=5.0"/>
+</head>
+<body>
+
+<!-- Animated Background Mesh -->
+<div class="page-backdrop" aria-hidden="true">
+  <div class="bg-orb bg-orb-1"></div>
+  <div class="bg-orb bg-orb-2"></div>
+  <div class="bg-orb bg-orb-3"></div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     SITE HEADER
+══════════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="header-brand" id="brandBtn">
+    <div class="brand-icon-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        <path d="m9 12 2 2 4-4"/>
+      </svg>
+    </div>
+    <div class="brand-name-block">
+      <div class="brand-name">AEGIS<span class="accent">ONE</span><span class="brand-version">DIODE v2.6</span></div>
+      <div class="brand-sub">One-Way Visibility. Zero-Way Exposure.</div>
+    </div>
+  </div>
+
+  <nav class="header-nav" aria-label="Main Navigation">
+    <button class="nav-btn active" data-page="hero" type="button">🏠 Overview</button>
+    <button class="nav-btn" data-page="simulation" type="button">🚀 3D Simulation Lab</button>
+    <button class="nav-btn" data-page="dashboard" type="button">
+      🛡️ Threat Forensics
+      <span class="nav-badge" id="navBadge">5</span>
+    </button>
+    <button class="nav-btn" data-page="threats" type="button">⚔️ Threat Matrix</button>
+    <button class="nav-btn" data-page="hardware" type="button">🏛️ Blueprint</button>
+  </nav>
+
+  <div class="header-end">
+    <div class="status-live">
+      <span class="pulse-dot"></span>
+      1-WAY LOCK ACTIVE
+    </div>
+    <button class="icon-btn" id="soundBtn" title="Toggle Audio">🔊</button>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════
+     MAIN APPLICATION
+══════════════════════════════════════════════ -->
+<main class="app-main">
+
+  <!-- ▓▓ PAGE: HERO ▓▓ -->
+  <section class="page-view active" id="page-hero">
+    <div class="hero-section">
+      <div class="hero-watermark" aria-hidden="true">AEGISONE</div>
+
+      <div class="hero-grid">
+        <!-- Left Content -->
+        <div class="hero-left">
+          <div class="eyebrow">
+            <span>🔒</span> Hardware-Enforced Unidirectional Isolation
+          </div>
+
+          <h1 class="hero-title">
+            One-Way<br>Visibility.
+            <em>Zero-Way<br>Exposure.</em>
+          </h1>
+
+          <p class="hero-desc">
+            AEGISONE uses a physical optical data diode — a hardware device where light travels in only one direction — to monitor critical infrastructure without creating a return path for adversaries. No decryption. No probes. No backdoors.
+          </p>
+
+          <div class="hero-ctas">
+            <button class="btn btn-primary btn-lg" id="heroCTASim">
+              🚀 Launch 3D Simulation Lab
+            </button>
+            <button class="btn btn-glass btn-lg" id="heroCTADash">
+              🛡️ Threat Intelligence Dashboard
+            </button>
+          </div>
+
+          <!-- Stats Strip -->
+          <div class="hero-stats-row">
+            <div class="hero-stat">
+              <div class="hero-stat-num" style="background:linear-gradient(135deg,#0062ff,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">1.48M+</div>
+              <div class="hero-stat-lbl">Flows Ingested / 24h</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-num" style="color:#059669;">100%</div>
+              <div class="hero-stat-lbl">Physical 1-Way Lock</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-num" style="color:#0062ff;">0</div>
+              <div class="hero-stat-lbl">Return Backdoors</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-num" style="color:#7c3aed;">99.8%</div>
+              <div class="hero-stat-lbl">AI Detection Confidence</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual Panel -->
+        <div class="hero-visual-panel">
+          <div class="hardware-showcase-card">
+            <div class="hardware-card-header">
+              <div>
+                <div class="hardware-card-title">Live Optical Diode Flow</div>
+                <div class="hardware-card-sub">Real-time simulation · Zero return carrier</div>
+              </div>
+              <div class="status-live"><span class="pulse-dot"></span>LIVE</div>
+            </div>
+
+            <!-- Animated SVG Canvas -->
+            <div class="optical-canvas-box">
+              <canvas id="heroOpticalCanvas" width="432" height="180"></canvas>
+            </div>
+
+            <!-- Telemetry Mini Bar -->
+            <div class="telemetry-mini-bar">
+              <div class="telemetry-mini-cell">
+                <div class="telemetry-mini-val" id="heroFlowRate">1,284</div>
+                <div class="telemetry-mini-lbl">Flows/sec</div>
+              </div>
+              <div class="telemetry-mini-cell">
+                <div class="telemetry-mini-val" style="color:#059669;">0</div>
+                <div class="telemetry-mini-lbl">Return pkts</div>
+              </div>
+              <div class="telemetry-mini-cell">
+                <div class="telemetry-mini-val" style="color:#7c3aed;">99.8%</div>
+                <div class="telemetry-mini-lbl">Confidence</div>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-glass" id="heroCardCTA" style="width:100%; border-radius:var(--r-lg);">
+            Enter 3D Simulation Stage ▸
+          </button>
+        </div>
+      </div>
+
+      <!-- Feature Pillars -->
+      <div class="feature-pillars">
+        <div class="feature-pillar">
+          <div class="pillar-icon-ring blue">↪</div>
+          <div class="pillar-title">Physics-Enforced One-Way Link</div>
+          <p class="pillar-body">A 1550nm optical laser emits photons through a collimating prism into a receive-only fiber. No RX return pin exists on the protected side — making attack feedback physically impossible.</p>
+        </div>
+        <div class="feature-pillar">
+          <div class="pillar-icon-ring violet">🔒</div>
+          <div class="pillar-title">Zero Payload Decryption</div>
+          <p class="pillar-body">Encrypted TLS sessions remain sealed. AEGISONE analyzes only flow timing, packet inter-arrival jitter, and domain-name entropy — never touching encryption keys or plaintext payloads.</p>
+        </div>
+        <div class="feature-pillar">
+          <div class="pillar-icon-ring emerald">🧠</div>
+          <div class="pillar-title">Explainable AI Forensics</div>
+          <p class="pillar-body">Every detection is backed by verifiable passive flow metadata, Shannon entropy readings, and MITRE ATT&CK vectors. Analysts receive defensible, auditable evidence — not black-box alerts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ▓▓ PAGE: 3D SIMULATION LAB ▓▓ -->
+  <section class="page-view" id="page-simulation">
+    <div class="sim-page">
+      <div class="section-head">
+        <div class="eyebrow">🚀 Live 3D WebGL Hardware Stage</div>
+        <h1 class="section-title">Unidirectional Intelligence <span class="text-gradient">In Action.</span></h1>
+        <p class="section-desc">Real-time telemetry streaming across the physical optical diode into the isolated AI analysis enclave with zero return protection.</p>
+      </div>
+
+      <!-- Engine Rail -->
+      <div class="engine-rail">
+        <div class="engine-card ready" id="engine-trex">
+          <div class="engine-card-glyph">⚡</div>
+          <div>
+            <div class="engine-card-name">Synthetic Traffic Generator</div>
+            <div class="engine-card-sub">TRex Stateful Data Engine</div>
+          </div>
+          <div class="engine-status"><span class="chip chip-emerald">ONLINE</span></div>
+        </div>
+
+        <div class="engine-card" id="engine-slowloris">
+          <div class="engine-card-glyph">⚔️</div>
+          <div>
+            <div class="engine-card-name">Adversary Attack Simulator</div>
+            <div class="engine-card-sub">Slowloris &amp; Scapy Engine</div>
+          </div>
+          <div class="engine-status"><span class="chip chip-crimson" id="slowlorisChip">ARMED</span></div>
+        </div>
+
+        <div class="engine-card ready" id="engine-sandbox">
+          <div class="engine-card-glyph">🧠</div>
+          <div>
+            <div class="engine-card-name">Malware C2 Analyser</div>
+            <div class="engine-card-sub">Isolated Sandbox AI</div>
+          </div>
+          <div class="engine-status"><span class="chip chip-emerald">ONLINE</span></div>
+        </div>
+
+        <button class="btn btn-primary" id="initEnginesBtn" style="white-space:nowrap; border-radius:var(--r-lg);">
+          ⚡ Staged Engine Boot
+        </button>
+      </div>
+
+      <!-- Console Strip -->
+      <div class="console-strip">
+        <div>
+          <span class="console-prefix">›</span>
+          <span id="bootConsoleOutput">AEGISONE Hardware Orchestrator active. Observing optical diode ingress feed.</span>
+        </div>
+        <span class="console-tag">TTY_0 · READ-ONLY AUDIT LOG</span>
+      </div>
+
+      <!-- 3D WebGL Viewport -->
+      <div class="viewport-stage">
+        <canvas id="simulationCanvas"></canvas>
+
+        <!-- Top HUD -->
+        <div class="vp-hud-top">
+          <div class="hud-glass">
+            <div class="hud-label">Active Scenario</div>
+            <div class="hud-value" id="hudScenarioName">Normal Traffic Baseline</div>
+          </div>
+
+          <div class="cam-preset-strip">
+            <button class="cam-btn active" data-cam="overview">Overview</button>
+            <button class="cam-btn" data-cam="diode">Optical Diode</button>
+            <button class="cam-btn" data-cam="enclave">AI Enclave</button>
+          </div>
+
+          <div class="hud-glass">
+            <div class="hud-metrics">
+              <div class="hud-metric">
+                <div class="hud-label">Ingest Rate</div>
+                <div class="hud-metric-val" id="hudIngestRate">1,284</div>
+                <div class="hud-metric-sub">flows/sec</div>
+              </div>
+              <div class="hud-metric" style="border-left:1px solid rgba(203,213,225,0.6);padding-left:18px;">
+                <div class="hud-label">Confidence</div>
+                <div class="hud-metric-val" id="hudConfidence" style="color:#059669;">99.8%</div>
+                <div class="hud-metric-sub">Passive ML</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom HUD -->
+        <div class="vp-hud-bottom">
+          <div class="scenario-strip">
+            <button class="scenario-btn safe active" data-scenario="baseline"><span class="s-dot"></span>01 · Baseline Flow</button>
+            <button class="scenario-btn danger" data-scenario="ddos-flood"><span class="s-dot"></span>02 · Slowloris / DDoS</button>
+            <button class="scenario-btn warn" data-scenario="c2-beacon"><span class="s-dot"></span>03 · C2 Beaconing</button>
+            <button class="scenario-btn warn" data-scenario="dns-tunnel"><span class="s-dot"></span>04 · DNS Smuggling</button>
+            <button class="scenario-btn warn" data-scenario="tls-anomaly"><span class="s-dot"></span>05 · TLS Anomaly</button>
+            <button class="scenario-btn warn" data-scenario="recon-sweep"><span class="s-dot"></span>06 · Recon Sweep</button>
+          </div>
+
+          <div class="detection-banner safe" id="detectionBanner">
+            <div class="det-icon">✓</div>
+            <div>
+              <div class="det-title" id="detTitle">Baseline Stable</div>
+              <div class="det-desc" id="detDesc">Continuous benign metadata entering the enclave. Encrypted payloads remain sealed.</div>
+            </div>
+            <div class="det-conf">
+              <div class="det-conf-val" id="detConf">99.8%</div>
+              <div class="det-conf-lbl">Confidence</div>
+            </div>
+            <button class="btn btn-glass btn-sm" id="inspectBtn">Inspect ▸</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ▓▓ PAGE: DASHBOARD ▓▓ -->
+  <section class="page-view" id="page-dashboard">
+    <div style="padding-top:36px;">
+      <div class="section-head">
+        <div class="eyebrow">🛡️ Defense Operations &amp; Forensic Triage</div>
+        <h1 class="section-title">Threat Intelligence <span class="text-gradient">Dashboard.</span></h1>
+        <p class="section-desc">Structured, explainable evidence from passive flow metadata. Every finding is auditable without compromising the isolated AI enclave.</p>
+      </div>
+
+      <!-- KPI Row -->
+      <div class="dash-kpi-row">
+        <div class="kpi-card">
+          <div class="kpi-accent-bar" style="background:linear-gradient(90deg,#0062ff,#7c3aed);"></div>
+          <div class="kpi-label"><span>Ingested Flow Telemetry</span><span>📊</span></div>
+          <div class="kpi-number">1,482,904</div>
+          <div class="kpi-sub">↑ +12.4% vs 24h baseline</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-accent-bar" style="background:linear-gradient(90deg,#059669,#0284c7);"></div>
+          <div class="kpi-label"><span>Physical Diode Lock</span><span>🔒</span></div>
+          <div class="kpi-number" style="color:#059669;">100.0%</div>
+          <div class="kpi-sub">Optical 1-way link active</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-accent-bar" style="background:linear-gradient(90deg,#e11d48,#f97316);"></div>
+          <div class="kpi-label"><span>Threats Quarantined</span><span>⚠️</span></div>
+          <div class="kpi-number" id="kpiThreatCount" style="color:#e11d48;">5</div>
+          <div class="kpi-sub">Passive detection verified</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-accent-bar" style="background:linear-gradient(90deg,#d97706,#f59e0b);"></div>
+          <div class="kpi-label"><span>Zero-Return Guarantees</span><span>🛡️</span></div>
+          <div class="kpi-number" style="color:#d97706;">0</div>
+          <div class="kpi-sub">Reverse pkts physically blocked</div>
+        </div>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <div class="filter-pills">
+          <span class="filter-lbl">SEVERITY:</span>
+          <button class="filter-btn active" data-filter="all">All (5)</button>
+          <button class="filter-btn" data-filter="critical">Critical</button>
+          <button class="filter-btn" data-filter="high">High</button>
+          <button class="filter-btn" data-filter="medium">Medium</button>
+        </div>
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input class="search-input" id="alertSearch" type="text" placeholder="Search by IP, threat name, or MITRE code…"/>
+        </div>
+      </div>
+
+      <div class="alert-feed" id="alertFeed"><!-- populated by JS --></div>
+    </div>
+  </section>
+
+  <!-- ▓▓ PAGE: THREAT MATRIX ▓▓ -->
+  <section class="page-view" id="page-threats">
+    <div style="padding-top:36px;">
+      <div class="section-head">
+        <div class="eyebrow">⚔️ Threat Vector Reference Matrix</div>
+        <h1 class="section-title">Six Attack Vectors. <span class="text-gradient">Zero Payload Inspection.</span></h1>
+        <p class="section-desc">Detected from flow timing, packet inter-arrival variance, and domain entropy alone — encryption stays sealed, SOC blindspots eliminated.</p>
+      </div>
+      <div class="threat-grid" id="threatGrid"><!-- populated by JS --></div>
+    </div>
+  </section>
+
+  <!-- ▓▓ PAGE: HARDWARE BLUEPRINT ▓▓ -->
+  <section class="page-view" id="page-hardware">
+    <div style="padding-top:36px;">
+      <div class="section-head">
+        <div class="eyebrow">🏛️ Zero-Trust Physics &amp; Compliance</div>
+        <h1 class="section-title">Physical Optical Diode <span class="text-gradient">Blueprint.</span></h1>
+        <p class="section-desc">Why software firewalls fail — and why physical optical isolation makes reverse compromise mathematically impossible.</p>
+      </div>
+
+      <div class="blueprint-grid">
+        <!-- CAD Schematic -->
+        <div class="blueprint-card">
+          <div>
+            <span class="chip chip-blue">HARDWARE ARCHITECTURE</span>
+            <h3 style="font-family:var(--font-display);font-size:1.35rem;font-weight:800;margin-top:10px;color:var(--ink-900);">Unidirectional Optical Transceiver Unit</h3>
+            <p style="font-size:0.86rem;color:var(--ink-500);margin-top:6px;line-height:1.6;">Physical transmission layer enforces photon flow in one direction via a 1550nm optical laser diode. The reverse RX fiber pin is physically absent.</p>
+          </div>
+          <div class="blueprint-svg-wrap">
+            <svg viewBox="0 0 600 240" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+              <rect x="20" y="70" width="100" height="100" rx="8" fill="#fff" stroke="#0062ff" stroke-width="2"/>
+              <text x="70" y="112" fill="#060c1c" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700" text-anchor="middle">PROTECTED</text>
+              <text x="70" y="130" fill="#64748b" font-family="JetBrains Mono,monospace" font-size="8.5" text-anchor="middle">TX FIBER ONLY</text>
+              <line x1="120" y1="120" x2="198" y2="120" stroke="#0062ff" stroke-width="2.5" stroke-dasharray="5 3"/>
+              <rect x="198" y="48" width="204" height="144" rx="12" fill="#f8faff" stroke="#0062ff" stroke-width="2"/>
+              <text x="300" y="72" fill="#0062ff" font-family="JetBrains Mono,monospace" font-size="9.5" font-weight="700" text-anchor="middle">AEGIS-DIODE ISOLATOR</text>
+              <polygon points="224,106 224,134 262,120" fill="#0062ff"/>
+              <text x="243" y="152" fill="#64748b" font-family="JetBrains Mono,monospace" font-size="7.5" text-anchor="middle">1550nm LASER</text>
+              <line x1="262" y1="120" x2="340" y2="120" stroke="#0062ff" stroke-width="4"/>
+              <polygon points="334,113 350,120 334,127" fill="#0062ff"/>
+              <rect x="355" y="78" width="13" height="84" rx="3" fill="#e11d48"/>
+              <text x="361" y="177" fill="#e11d48" font-family="JetBrains Mono,monospace" font-size="7.5" font-weight="700" text-anchor="middle">BLOCK</text>
+              <line x1="402" y1="120" x2="480" y2="120" stroke="#059669" stroke-width="2.5" stroke-dasharray="5 3"/>
+              <rect x="480" y="70" width="100" height="100" rx="8" fill="#fff" stroke="#059669" stroke-width="2"/>
+              <text x="530" y="112" fill="#060c1c" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700" text-anchor="middle">AI ENCLAVE</text>
+              <text x="530" y="130" fill="#64748b" font-family="JetBrains Mono,monospace" font-size="8.5" text-anchor="middle">RX SENSOR ONLY</text>
+              <path d="M 480 154 C 360 212, 240 212, 120 154" stroke="#e11d48" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+              <text x="300" y="228" fill="#e11d48" font-family="JetBrains Mono,monospace" font-size="9.5" font-weight="700" text-anchor="middle">✕  NO RETURN FIBER PIN — PHYSICALLY IMPOSSIBLE</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="blueprint-card">
+          <div>
+            <span class="chip chip-violet">SECURITY COMPARISON</span>
+            <h3 style="font-family:var(--font-display);font-size:1.35rem;font-weight:800;margin-top:10px;color:var(--ink-900);">Software Firewall vs. Physical Optical Diode</h3>
+          </div>
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Dimension</th>
+                <th>Software Firewall</th>
+                <th>AEGISONE Diode</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Zero-Day Vulnerability</td><td>High — firmware stack bypass possible</td><td>Zero — enforced by optical physics</td></tr>
+              <tr><td>Reverse Command Risk</td><td>Possible via TCP ACK backchannels</td><td>Physically impossible</td></tr>
+              <tr><td>Decryption Required</td><td>Requires SSL/TLS MitM keys</td><td>Zero — metadata only</td></tr>
+              <tr><td>Latency Overhead</td><td>4.2ms–18.5ms (DPI inspection)</td><td>&lt;0.05ms optical pass-through</td></tr>
+              <tr><td>Air-Gap Equivalence</td><td>No (software bypass exists)</td><td>Yes — hardware enforced</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══════════════════════════════════════════════
+     FORENSIC DRAWER
+══════════════════════════════════════════════ -->
+<div class="drawer-backdrop" id="drawerBackdrop">
+  <div class="drawer-panel" role="dialog" aria-modal="true">
+    <div class="drawer-head">
+      <div>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+          <span class="chip chip-blue" id="drawerCode">SD-DDOS</span>
+          <span class="chip chip-crimson" id="drawerSeverityChip">CRITICAL</span>
+        </div>
+        <div class="drawer-title" id="drawerTitle">High-Volume Slowloris Connection Exhaustion</div>
+      </div>
+      <button class="icon-btn" id="closeDrawerBtn">✕</button>
+    </div>
+
+    <div class="drawer-body">
+      <!-- Tabs -->
+      <div class="drawer-tabs">
+        <button class="drawer-tab active" data-tab="plain">📖 Plain-English Summary</button>
+        <button class="drawer-tab" data-tab="json">⚙️ Raw IPFIX / NetFlow JSON</button>
+      </div>
+
+      <!-- Plain English Tab -->
+      <div id="tabPlain" style="display:flex;flex-direction:column;gap:16px;">
+        <div class="drawer-section">
+          <div class="drawer-section-title">📖 Incident Explanation</div>
+          <p style="font-size:0.9rem;font-weight:700;color:var(--ink-900);margin-bottom:6px;" id="drawerSummaryHead">Massive burst of incomplete HTTP sessions exceeding baseline by 19.3×.</p>
+          <p style="font-size:0.84rem;color:var(--ink-500);line-height:1.58;" id="drawerSummaryBody">Adversary is attempting to exhaust connection table states on internal authentication gateways. AEGISONE captures the flow rate anomaly passively through the optical diode without interacting with the adversary.</p>
+        </div>
+
+        <!-- Parties -->
+        <div class="drawer-section">
+          <div class="drawer-section-title">⚡ Connection Flow Through Optical Diode</div>
+          <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;">
+            <div style="background:#fff;border:1px solid rgba(203,213,225,0.8);padding:12px;border-radius:var(--r-sm);">
+              <div style="font-family:var(--font-mono);font-size:0.65rem;font-weight:700;color:var(--crimson);text-transform:uppercase;margin-bottom:2px;">Observed Source</div>
+              <div style="font-family:var(--font-mono);font-size:0.9rem;font-weight:700;color:var(--ink-900);" id="drawerSrc">198.51.100.44</div>
+              <div style="font-size:0.72rem;color:var(--ink-400);">External Adversary IP</div>
+            </div>
+            <div style="font-family:var(--font-mono);font-size:1.1rem;color:var(--emerald);font-weight:800;text-align:center;">1-WAY ➔</div>
+            <div style="background:#fff;border:1px solid rgba(203,213,225,0.8);padding:12px;border-radius:var(--r-sm);">
+              <div style="font-family:var(--font-mono);font-size:0.65rem;font-weight:700;color:var(--blue);text-transform:uppercase;margin-bottom:2px;">Protected Destination</div>
+              <div style="font-family:var(--font-mono);font-size:0.9rem;font-weight:700;color:var(--ink-900);" id="drawerDst">10.0.0.15</div>
+              <div style="font-size:0.72rem;color:var(--ink-400);">Gov Auth Gateway</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Telemetry Table -->
+        <div class="drawer-section">
+          <div class="drawer-section-title">📊 Passive Flow Telemetry</div>
+          <table style="width:100%;border-collapse:collapse;font-size:0.84rem;" id="drawerTable"></table>
+        </div>
+      </div>
+
+      <!-- JSON Tab -->
+      <div id="tabJson" style="display:none;">
+        <pre class="json-block" id="drawerJson"></pre>
+      </div>
+
+      <button class="btn btn-primary" id="drawerSimBtn" style="width:100%;margin-top:auto;">
+        Replay Threat in 3D Simulation ▸
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast Stack -->
+<div class="toast-stack" id="toastStack"></div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-brand">
+    AEGIS<span class="accent">ONE</span>
+    <span style="font-size:0.82rem;font-weight:600;color:var(--ink-400);">One-Way Visibility. Zero-Way Exposure.</span>
+  </div>
+  <div style="font-family:var(--font-mono);font-size:0.7rem;color:var(--ink-400);">
+    CLASSIFICATION: EXECUTIVE DEFENSE SHOWCASE · ZERO REVERSE EXPOSURE
+  </div>
+</footer>
+
+<script type="module" src="./js/app.js"></script>
+</body>
+</html>
